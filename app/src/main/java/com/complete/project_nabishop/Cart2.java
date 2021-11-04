@@ -1,14 +1,19 @@
 package com.complete.project_nabishop;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Cart2 extends AppCompatActivity {
     FrameLayout nut1, nut2, nut3, nut4;
+    ImageView minus,plus;
+    TextView number,total,tvPrice;
+    int numberOrder = 0, totalPrice, price;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,5 +50,40 @@ public class Cart2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        initView();
+        getBundle();
+
     }
+
+
+
+
+    private void initView() {
+        minus = findViewById(R.id.minus);
+        plus = findViewById(R.id.plus);
+        number = findViewById(R.id.tv_number);
+        total = findViewById(R.id.tv_total);
+        tvPrice = findViewById(R.id.tv_price);
+
+    }
+    private void getBundle() {
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberOrder = numberOrder + 1;
+                number.setText(String.valueOf(numberOrder));
+
+            }
+        });
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(numberOrder > 1) {
+                    numberOrder = numberOrder - 1;
+                }
+                number.setText(String.valueOf(numberOrder));
+            }
+        });
+    }
+
 }

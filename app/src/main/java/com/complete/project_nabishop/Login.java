@@ -7,14 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
 
 public class Login extends AppCompatActivity {
     Button login;
-    TextView tv;
+    TextView tv,user,pass,title;
     FrameLayout img_back;
+    LinearLayout footer;
+    float v;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,5 +46,25 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        user = findViewById(R.id.edt_user);
+        pass = findViewById(R.id.edt_pass);
+        title = findViewById(R.id.title_login);
+        footer = findViewById(R.id.footer);
+
+
+        animateView(user, 300);
+        animateView(pass, 500);
+        animateView(login, 700);
+        animateView(footer, 900);
+
+        title.setAlpha(v);
+        title.animate().alpha(1).setDuration(800).setStartDelay(300).start();
+
     }
+    private void animateView (View view, int delay) {
+        view.setTranslationX(200);
+        view.setAlpha(v);
+        view.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(delay).start();
+    }
+
 }

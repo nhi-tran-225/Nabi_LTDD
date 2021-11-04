@@ -57,7 +57,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="380dp"
+                android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:background="#F0EFEF"
@@ -68,21 +68,23 @@
                 <FrameLayout
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ctdh">
+                    android:layout_gravity="center">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/check" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CheckBox" />
                 </FrameLayout>
 
                 <ImageView
+                    android:id="@+id/image_item"
                     android:layout_width="110dp"
                     android:layout_height="100dp"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
-                    android:src="@drawable/anh_ctsp1"
-                    android:layout_gravity="center"/>
+                    android:src="@drawable/anh_ctsp1" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -91,13 +93,14 @@
                     android:paddingTop="15dp">
 
                     <TextView
+                        android:id="@+id/item_sp"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
                         android:gravity="center"
                         android:text="Girl trendy sweater"
                         android:textColor="@color/black"
                         android:textSize="18dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -114,7 +117,8 @@
                             android:background="@drawable/mau_ao">
 
                             <ImageView
-                                android:layout_width="29dp"
+                                android:id="@+id/item_color"
+                                android:layout_width="26dp"
                                 android:layout_height="29dp"
                                 android:layout_gravity="center"
                                 android:background="#B5B09D" />
@@ -128,6 +132,7 @@
                             android:background="@drawable/ctdh">
 
                             <TextView
+                                android:id="@+id/item_size"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:fontFamily="@font/ribeyer"
@@ -138,170 +143,30 @@
                         </FrameLayout>
 
                     </LinearLayout>
+
                     <TextView
+                        android:id="@+id/tv_price"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
                         android:gravity="center"
                         android:text="310.000 đ"
                         android:textColor="@color/black"
                         android:textSize="18dp" />
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-
-                        <FrameLayout
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/ctdh">
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/minus" />
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:layout_width="45dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/ctdh">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:text="1"
-                                android:textColor="@color/black"
-                                android:textSize="16dp" />
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/ctdh">
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/add" />
-                        </FrameLayout>
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:text="310.000 đ"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:background="#F0EFEF"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_marginTop="15dp">
-
-                <FrameLayout
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ctdh">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/check" />
-                </FrameLayout>
-
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/anh_ctsp1"
-                    android:layout_gravity="center"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:paddingTop="15dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:text="Girl trendy sweater"
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-                        android:textStyle="bold"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="horizontal">
 
                         <FrameLayout
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
-                            android:background="@drawable/mau_ao">
-
-                            <ImageView
-                                android:layout_width="29dp"
-                                android:layout_height="29dp"
-                                android:layout_gravity="center"
-                                android:background="#B5B09D" />
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
-                            android:background="@drawable/ctdh">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:fontFamily="@font/ribeyer"
-                                android:gravity="center"
-                                android:text="M"
-                                android:textColor="@color/black"
-                                android:textSize="16dp" />
-                        </FrameLayout>
-
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:text="310.000 đ"
-                        android:textColor="@color/black"
-                        android:textSize="18dp" />
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-
-                        <FrameLayout
                             android:layout_width="25dp"
                             android:layout_height="25dp"
                             android:background="@drawable/ctdh">
 
                             <ImageView
-                                android:layout_width="15dp"
+                                android:id="@+id/minus"
+                                android:layout_width="14dp"
                                 android:layout_height="20dp"
                                 android:layout_gravity="center"
                                 android:src="@drawable/minus" />
@@ -313,6 +178,7 @@
                             android:background="@drawable/ctdh">
 
                             <TextView
+                                android:id="@+id/tv_number"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
@@ -327,8 +193,9 @@
                             android:background="@drawable/ctdh">
 
                             <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
+                                android:id="@+id/plus"
+                                android:layout_width="11dp"
+                                android:layout_height="13dp"
                                 android:layout_gravity="center"
                                 android:src="@drawable/add" />
                         </FrameLayout>
@@ -343,150 +210,7 @@
                         android:textSize="16dp" />
                 </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:background="#F0EFEF"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_marginTop="15dp">
 
-                <FrameLayout
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ctdh">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/check" />
-                </FrameLayout>
-
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/anh_ctsp1"
-                    android:layout_gravity="center"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:paddingTop="15dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:text="Girl trendy sweater"
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-                        android:textStyle="bold"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <FrameLayout
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
-                            android:background="@drawable/mau_ao">
-
-                            <ImageView
-                                android:layout_width="29dp"
-                                android:layout_height="29dp"
-                                android:layout_gravity="center"
-                                android:background="#B5B09D" />
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
-                            android:background="@drawable/ctdh">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:fontFamily="@font/ribeyer"
-                                android:gravity="center"
-                                android:text="M"
-                                android:textColor="@color/black"
-                                android:textSize="16dp" />
-                        </FrameLayout>
-
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:text="310.000 đ"
-                        android:textColor="@color/black"
-                        android:textSize="18dp" />
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-
-                        <FrameLayout
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/ctdh">
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/minus" />
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:layout_width="45dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/ctdh">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:text="1"
-                                android:textColor="@color/black"
-                                android:textSize="16dp" />
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/ctdh">
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/add" />
-                        </FrameLayout>
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:text="310.000 đ"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
     <LinearLayout
@@ -499,8 +223,13 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            android:background="@drawable/ctdh"
+
             android:layout_marginLeft="20dp">
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
         </FrameLayout>
 
         <TextView
@@ -509,6 +238,7 @@
             android:layout_marginLeft="10dp"
             android:gravity="center|left"
             android:text="All"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18dp" />
         <LinearLayout
@@ -525,15 +255,17 @@
                 android:gravity="center"
                 android:textStyle="bold"/>
             <TextView
+                android:id="@+id/tv_total"
                 android:layout_width="160dp"
                 android:layout_height="25dp"
-                android:text=" 310.000 đ"
+                android:text=" 0 đ"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center"/>
         </LinearLayout>
         <Button
+            android:id="@+id/btn_buy"
             android:layout_width="135dp"
             android:layout_height="60dp"
             android:background="@drawable/nut_trang"
